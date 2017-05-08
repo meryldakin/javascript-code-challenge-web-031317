@@ -3,17 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>JavaScript Code Challenge</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src='./lib/jquery-3.2.1.js'></script>
   </head>
   <body>
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <h1>The Comment Spot</h1>
+        <p>A place for comments you don't want to save!</p>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
 
-    <form id="note-form">
-      <input type='text' />
-      <input type='submit' />
-    </form>
+          <h1>Add a comment:</h1>
+          <div class="form-group">
 
-    <div id='comment-list'></div>
+            <form id="note-form" >
+              <input type='text' id='comment-val' placeholder="type some thoughts!" />
+              <input type='submit' class="btn btn-default"/>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h1><span class="badge"></span>Your comments:</h1>
+          <div id='comment-list'></div>
 
+        </div>
+
+      </div>
+    </div>
     <script type="text/javascript" src='src/CommentList.js'></script>
     <script type="text/javascript" src='src/Comment.js'></script>
     <script type="text/javascript" src='src/index.js'></script>
